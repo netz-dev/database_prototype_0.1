@@ -26,9 +26,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'devise'
+
 gem 'sprockets-rails', '~> 3.2'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
+gem 'simple_form'
 
 
 group :development, :test do
