@@ -1,0 +1,23 @@
+<%= simple_form_for(@campaign) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :client %>
+    <%= f.input :campaign_reference %>
+    <%= f.input :campaign_status %>
+    <%= f.input :campaign_type %>
+    <%= f.input :campaign_plan %>
+    <%= f.input :estimated_campaign_length %>
+    <%= f.input :initial_total_prospects %>
+    <%= f.input :total_prospects_to_date %>
+    <%= f.input :commercial_agreement_signed_date %>
+    <%= f.input :estimated_start_date %>
+    <%= f.input :estimated_end_date %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

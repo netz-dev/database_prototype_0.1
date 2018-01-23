@@ -1,0 +1,2 @@
+module CampaignResultsHelper
+end

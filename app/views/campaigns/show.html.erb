@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @campaign.client %>
+</p>
+
+<p>
+  <strong>Campaign reference:</strong>
+  <%= @campaign.campaign_reference %>
+</p>
+
+<p>
+  <strong>Campaign status:</strong>
+  <%= @campaign.campaign_status %>
+</p>
+
+<p>
+  <strong>Campaign type:</strong>
+  <%= @campaign.campaign_type %>
+</p>
+
+<p>
+  <strong>Campaign plan:</strong>
+  <%= @campaign.campaign_plan %>
+</p>
+
+<p>
+  <strong>Estimated campaign length:</strong>
+  <%= @campaign.estimated_campaign_length %>
+</p>
+
+<p>
+  <strong>Initial total prospects:</strong>
+  <%= @campaign.initial_total_prospects %>
+</p>
+
+<p>
+  <strong>Total prospects to date:</strong>
+  <%= @campaign.total_prospects_to_date %>
+</p>
+
+<p>
+  <strong>Commercial agreement signed date:</strong>
+  <%= @campaign.commercial_agreement_signed_date %>
+</p>
+
+<p>
+  <strong>Estimated start date:</strong>
+  <%= @campaign.estimated_start_date %>
+</p>
+
+<p>
+  <strong>Estimated end date:</strong>
+  <%= @campaign.estimated_end_date %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @campaign.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @campaign.end_date %>
+</p>
+
+<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<%= link_to 'Back', campaigns_path %>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Netz Database Prototype 01</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body style="background-color: #f5f6f7;">
+
+    <%= render "layouts/clients/header" %>
+
+    <div class="row">
+      <div class="col-sm-2" style="background-color: #3B718E;">
+        <%= render "layouts/clients/sidebar" %>
+      </div>
+      <div class="col-sm-10" style="background-color: #f5f6f7; min-height: 700px;">
+        <%= yield %>
+      </div>
+    </div>
+
+  </body>
+</html>

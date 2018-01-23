@@ -32,6 +32,7 @@ gem 'sprockets-rails', '~> 3.2'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
 gem 'simple_form'
+gem 'country_select'
 
 
 group :development, :test do

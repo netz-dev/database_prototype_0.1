@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="row">
+    <div style="min-width: 100%; background-color: white; margin-left: -15px;">
+      <h3 style="padding: 20px;">Clients CRM</h3>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <%= render partial: "layouts/shared/flash_messages", flash: flash %>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <%= link_to 'New Campaign', new_campaign_path, class: "btn btn-outline-secondary", style: "width: 180px;" %> <%= link_to 'Add Results', new_campaign_result_path, class: "btn btn-outline-secondary", style: "margin-left: 20px; width: 180px;" %>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row" style="margin-top: 30px;">
+    <div class="card table-responsive" style="padding: 20px; margin-right: 15px;">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Reference</th>
+            <th>Status</th>
+            <th>Client</th>
+            <th>Company</th>
+            <!-- <th>Campaign type</th> -->
+            <th>Plan</th>
+            <!-- <th>Estimated campaign length</th> -->
+            <!-- <th>Initial total prospects</th> -->
+            <!-- <th>Total prospects to date</th> -->
+            <th>Signed date</th>
+            <th>Estimated start</th>
+            <!-- <th>Estimated end date</th> -->
+            <th>Actual Start</th>
+            <!-- <th>End date</th> -->
+            <th colspan="1"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @campaigns.each do |campaign| %>
+            <tr>
+              <td><%= campaign.campaign_reference %></td>
+              <td><%= campaign.campaign_status %></td>
+              <td><%= campaign.client.first_name %> <%= campaign.client.last_name %></td>
+              <td><%= campaign.client.client_company.company_name %></td>
+              <!-- <td><%= campaign.campaign_type %></td> -->
+              <td><%= campaign.campaign_plan %></td>
+              <!-- <td><%= campaign.estimated_campaign_length %></td> -->
+              <!-- <td><%= campaign.initial_total_prospects %></td> -->
+              <!-- <td><%= campaign.total_prospects_to_date %></td> -->
+              <td><%= campaign.commercial_agreement_signed_date %></td>
+              <td><%= campaign.estimated_start_date %></td>
+              <!-- <td><%= campaign.estimated_end_date %></td> -->
+              <td><%= campaign.start_date %></td>
+              <!-- <td><%= campaign.end_date %></td> -->
+              <td><%= link_to 'Show', campaign %></td>
+              <!-- <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
+              <td><%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-faded" style="background-color: #5b8da7; height: 60px; colour:white;">
+  <div class="container-fluid">
+    <div class="col-sm-6">
+      <%= image_tag "netz-logo-white.png", class: 'logo' %>
+    </div>
+    <div class="col-sm-6" style="padding-top: 15px;">
+      <ul class="nav justify-content-end" style="padding-bottom:10px;">
+        <li class="nav-item">
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-outline-light btn-sm float-right", style: "width: 90px;" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

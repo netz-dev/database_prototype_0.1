@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Campaign:</strong>
+  <%= @campaign_result.campaign %>
+</p>
+
+<p>
+  <strong>Campaign reply rate:</strong>
+  <%= @campaign_result.campaign_reply_rate %>
+</p>
+
+<p>
+  <strong>Campaign click through rate:</strong>
+  <%= @campaign_result.campaign_click_through_rate %>
+</p>
+
+<p>
+  <strong>Campaign open rate:</strong>
+  <%= @campaign_result.campaign_open_rate %>
+</p>
+
+<p>
+  <strong>Total replies:</strong>
+  <%= @campaign_result.total_replies %>
+</p>
+
+<p>
+  <strong>Total positive replies:</strong>
+  <%= @campaign_result.total_positive_replies %>
+</p>
+
+<p>
+  <strong>Total opens:</strong>
+  <%= @campaign_result.total_opens %>
+</p>
+
+<p>
+  <strong>Total clicks:</strong>
+  <%= @campaign_result.total_clicks %>
+</p>
+
+<%= link_to 'Edit', edit_campaign_result_path(@campaign_result) %> |
+<%= link_to 'Back', campaign_results_path %>

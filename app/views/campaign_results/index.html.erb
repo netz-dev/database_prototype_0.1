@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Campaign Results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campaign</th>
+      <th>Campaign reply rate</th>
+      <th>Campaign click through rate</th>
+      <th>Campaign open rate</th>
+      <th>Total replies</th>
+      <th>Total positive replies</th>
+      <th>Total opens</th>
+      <th>Total clicks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campaign_results.each do |campaign_result| %>
+      <tr>
+        <td><%= campaign_result.campaign %></td>
+        <td><%= campaign_result.campaign_reply_rate %></td>
+        <td><%= campaign_result.campaign_click_through_rate %></td>
+        <td><%= campaign_result.campaign_open_rate %></td>
+        <td><%= campaign_result.total_replies %></td>
+        <td><%= campaign_result.total_positive_replies %></td>
+        <td><%= campaign_result.total_opens %></td>
+        <td><%= campaign_result.total_clicks %></td>
+        <td><%= link_to 'Show', campaign_result %></td>
+        <td><%= link_to 'Edit', edit_campaign_result_path(campaign_result) %></td>
+        <td><%= link_to 'Destroy', campaign_result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Campaign Result', new_campaign_result_path %>

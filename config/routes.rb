@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   get 'pages/home'
   get 'dashboard/index'
 
+  resources :client_companies
+  resources :clients
+  resources :campaigns
+  resources :campaign_results
+
   authenticated :user do
     root 'dashboard#index', as: :authenticated_root
   end

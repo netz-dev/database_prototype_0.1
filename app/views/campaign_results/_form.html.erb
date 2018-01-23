@@ -1,0 +1,18 @@
+<%= simple_form_for(@campaign_result) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :campaign %>
+    <%= f.input :campaign_reply_rate %>
+    <%= f.input :campaign_click_through_rate %>
+    <%= f.input :campaign_open_rate %>
+    <%= f.input :total_replies %>
+    <%= f.input :total_positive_replies %>
+    <%= f.input :total_opens %>
+    <%= f.input :total_clicks %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
