@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :prospects
   devise_for :users
   get 'pages/home'
   get 'dashboard/index'

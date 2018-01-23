@@ -73,6 +73,23 @@ ActiveRecord::Schema.define(version: 2018012302164499) do
     t.index ["client_company_id"], name: "index_clients_on_client_company_id"
   end
 
+  create_table "prospects", force: :cascade do |t|
+    t.bigint "client_id"
+    t.bigint "campaign_id"
+    t.string "prospect_type"
+    t.string "prospect_status"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.integer "phone_number"
+    t.integer "mobile_number"
+    t.string "branch_location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["campaign_id"], name: "index_prospects_on_campaign_id"
+    t.index ["client_id"], name: "index_prospects_on_client_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -93,4 +110,6 @@ ActiveRecord::Schema.define(version: 2018012302164499) do
   add_foreign_key "campaign_results", "campaigns"
   add_foreign_key "campaigns", "clients"
   add_foreign_key "clients", "client_companies"
+  add_foreign_key "prospects", "campaigns"
+  add_foreign_key "prospects", "clients"
 end
