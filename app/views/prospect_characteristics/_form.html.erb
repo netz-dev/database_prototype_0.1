@@ -1,0 +1,23 @@
+<%= simple_form_for(@prospect_characteristic) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :job_title %>
+    <%= f.input :seniority_level %>
+    <%= f.input :function %>
+    <%= f.input :industry %>
+    <%= f.input :company_name %>
+    <%= f.input :company_headcount %>
+    <%= f.input :past_company %>
+    <%= f.input :company_type %>
+    <%= f.input :school %>
+    <%= f.input :language %>
+    <%= f.input :years_in_current_position %>
+    <%= f.input :years_at_current_company %>
+    <%= f.input :years_of_experience %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

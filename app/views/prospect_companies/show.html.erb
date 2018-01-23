@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @prospect_company.company_name %>
+</p>
+
+<p>
+  <strong>Street address:</strong>
+  <%= @prospect_company.street_address %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @prospect_company.state %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @prospect_company.postal_code %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @prospect_company.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @prospect_company.country %>
+</p>
+
+<%= link_to 'Edit', edit_prospect_company_path(@prospect_company) %> |
+<%= link_to 'Back', prospect_companies_path %>

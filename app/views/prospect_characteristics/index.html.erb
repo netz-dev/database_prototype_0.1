@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Prospect Characteristics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Job title</th>
+      <th>Seniority level</th>
+      <th>Function</th>
+      <th>Industry</th>
+      <th>Company name</th>
+      <th>Company headcount</th>
+      <th>Past company</th>
+      <th>Company type</th>
+      <th>School</th>
+      <th>Language</th>
+      <th>Years in current position</th>
+      <th>Years at current company</th>
+      <th>Years of experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prospect_characteristics.each do |prospect_characteristic| %>
+      <tr>
+        <td><%= prospect_characteristic.job_title %></td>
+        <td><%= prospect_characteristic.seniority_level %></td>
+        <td><%= prospect_characteristic.function %></td>
+        <td><%= prospect_characteristic.industry %></td>
+        <td><%= prospect_characteristic.company_name %></td>
+        <td><%= prospect_characteristic.company_headcount %></td>
+        <td><%= prospect_characteristic.past_company %></td>
+        <td><%= prospect_characteristic.company_type %></td>
+        <td><%= prospect_characteristic.school %></td>
+        <td><%= prospect_characteristic.language %></td>
+        <td><%= prospect_characteristic.years_in_current_position %></td>
+        <td><%= prospect_characteristic.years_at_current_company %></td>
+        <td><%= prospect_characteristic.years_of_experience %></td>
+        <td><%= link_to 'Show', prospect_characteristic %></td>
+        <td><%= link_to 'Edit', edit_prospect_characteristic_path(prospect_characteristic) %></td>
+        <td><%= link_to 'Destroy', prospect_characteristic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prospect Characteristic', new_prospect_characteristic_path %>

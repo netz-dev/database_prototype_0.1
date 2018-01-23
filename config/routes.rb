@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :prospect_characteristics
+  resources :prospect_companies
   resources :prospects
   devise_for :users
   get 'pages/home'

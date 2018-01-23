@@ -1,0 +1,2 @@
+module ProspectCharacteristicsHelper
+end

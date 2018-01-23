@@ -73,6 +73,35 @@ ActiveRecord::Schema.define(version: 2018012302164499) do
     t.index ["client_company_id"], name: "index_clients_on_client_company_id"
   end
 
+  create_table "prospect_characteristics", force: :cascade do |t|
+    t.string "job_title"
+    t.string "seniority_level"
+    t.string "function"
+    t.string "industry"
+    t.string "company_name"
+    t.string "company_headcount"
+    t.string "past_company"
+    t.string "company_type"
+    t.string "school"
+    t.string "language"
+    t.string "years_in_current_position"
+    t.string "years_at_current_company"
+    t.string "years_of_experience"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "prospect_companies", force: :cascade do |t|
+    t.string "company_name"
+    t.string "street_address"
+    t.string "state"
+    t.string "postal_code"
+    t.string "city"
+    t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "prospects", force: :cascade do |t|
     t.bigint "client_id"
     t.bigint "campaign_id"
@@ -86,8 +115,12 @@ ActiveRecord::Schema.define(version: 2018012302164499) do
     t.string "branch_location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "prospect_company_id"
+    t.bigint "prospect_characteristic_id"
     t.index ["campaign_id"], name: "index_prospects_on_campaign_id"
     t.index ["client_id"], name: "index_prospects_on_client_id"
+    t.index ["prospect_characteristic_id"], name: "index_prospects_on_prospect_characteristic_id"
+    t.index ["prospect_company_id"], name: "index_prospects_on_prospect_company_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -112,4 +145,6 @@ ActiveRecord::Schema.define(version: 2018012302164499) do
   add_foreign_key "clients", "client_companies"
   add_foreign_key "prospects", "campaigns"
   add_foreign_key "prospects", "clients"
+  add_foreign_key "prospects", "prospect_characteristics"
+  add_foreign_key "prospects", "prospect_companies"
 end
