@@ -26,6 +26,11 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'sprockets-rails', '~> 3.2'
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.0.0'
+
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
