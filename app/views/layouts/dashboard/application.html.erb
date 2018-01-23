@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>NetzDatabasePrototype01</title>
+    <title>Netz Database Prototype 01</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,9 +12,16 @@
 
   <body style="background-color: #f5f6f7;">
 
-    <div class="container">
-      <%= render partial: "layouts/shared/flash_messages", flash: flash %>
+    <%= render "layouts/dashboard/header" %>
+
+    <div class="row">
+      <div class="col-sm-2" style="background-color: #3B718E;">
+        <%= render "layouts/dashboard/sidebar" %>
+      </div>
+      <div class="col-sm-10" style="background-color: #f5f6f7; min-height: 700px;">
+        <%= yield %>
+      </div>
     </div>
-    <%= yield %>
+
   </body>
 </html>
