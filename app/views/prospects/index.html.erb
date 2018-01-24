@@ -21,36 +21,36 @@
       <table class="table table-hover">
         <thead>
           <tr>
+            <th>Type</th>
+            <th>Status</th>
             <th>Client</th>
+            <th>Company</th>
             <th>Campaign</th>
-            <th>Prospect type</th>
-            <th>Prospect status</th>
             <th>First name</th>
             <th>Last name</th>
             <th>Email</th>
-            <th>Phone number</th>
-            <th>Mobile number</th>
-            <th>Branch location</th>
-            <th colspan="3"></th>
+            <th>Location</th>
+            <th colspan="1"></th>
           </tr>
         </thead>
 
         <tbody>
           <% @prospects.each do |prospect| %>
             <tr>
-              <td><%= prospect.client %></td>
-              <td><%= prospect.campaign %></td>
               <td><%= prospect.prospect_type %></td>
               <td><%= prospect.prospect_status %></td>
+              <td><%= prospect.client.first_name %> <%= prospect.client.first_name %></td>
+              <td><%= prospect.client.client_company.company_name %></td>
+              <td><%= prospect.campaign.campaign_reference %></td>
               <td><%= prospect.first_name %></td>
               <td><%= prospect.last_name %></td>
               <td><%= prospect.email %></td>
-              <td><%= prospect.phone_number %></td>
-              <td><%= prospect.mobile_number %></td>
+              <!-- <td><%= prospect.phone_number %></td> -->
+              <!-- <td><%= prospect.mobile_number %></td> -->
               <td><%= prospect.branch_location %></td>
               <td><%= link_to 'Show', prospect %></td>
-              <td><%= link_to 'Edit', edit_prospect_path(prospect) %></td>
-              <td><%= link_to 'Destroy', prospect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <!-- <td><%= link_to 'Edit', edit_prospect_path(prospect) %></td> -->
+              <!-- <td><%= link_to 'Destroy', prospect, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
             </tr>
           <% end %>
         </tbody>

@@ -1,9 +1,11 @@
 <%= simple_form_for(@prospect) do |f| %>
   <%= f.error_notification %>
-
+  
   <div class="form-inputs">
-    <%= f.association :client %>
-    <%= f.association :campaign %>
+    <%= f.association :client, required: false %>
+    <%= f.association :campaign, required: false %>
+    <%= f.association :prospect_company, required: false %>
+    <%= f.association :prospect_characteristic, required: false %>
     <%= f.input :prospect_type %>
     <%= f.input :prospect_status %>
     <%= f.input :first_name %>

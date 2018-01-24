@@ -1,6 +1,27 @@
-<h1>Editing Client Company</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div style="min-width: 100%; background-color: white; margin-left: -15px;">
+      <h3 style="padding: 20px;">Edit: <%= @client_company.company_name %></h3>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <%= render partial: "layouts/shared/flash_messages", flash: flash %>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <%= link_to 'Back to CRM', clients_path, class: "btn btn-outline-secondary", style: "width: 180px;" %> <%= link_to 'Show Details', client_company_path(@client_company), class: "btn btn-outline-secondary", style: "width: 180px; margin-left: 20px;" %>
+  </div>
+</div>
 
-<%= render 'form', client_company: @client_company %>
+<div class="container-fluid" style="margin-bottom: 80px;">
+  <div class="row" style="margin-top: 30px;">
+    <div class="col" style="margin-left: -15px;">
+      <div class="card" style="padding: 20px; min-width: 100%;">
 
-<%= link_to 'Show', @client_company %> |
-<%= link_to 'Back', client_companies_path %>
+        <%= render 'form', client_company: @client_company %>
+
+      </div>
+    </div>
+  </div>
+</div>

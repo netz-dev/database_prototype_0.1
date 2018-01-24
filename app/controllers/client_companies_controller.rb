@@ -11,6 +11,7 @@ class ClientCompaniesController < ApplicationController
   # GET /client_companies/1
   # GET /client_companies/1.json
   def show
+    @company_clients = Client.where(:client_company_id => @client_company)
   end
 
   # GET /client_companies/new

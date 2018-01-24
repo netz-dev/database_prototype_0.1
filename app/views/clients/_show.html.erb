@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col">
+    <p class="lead">Client Info</p><hr />
+
+    <p>
+      <strong>Title:</strong>
+      <%= @client.title %>
+    </p>
+
+    <p>
+      <strong>First name:</strong>
+      <%= @client.first_name %>
+    </p>
+
+    <p>
+      <strong>Last name:</strong>
+      <%= @client.last_name %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @client.email %>
+    </p>
+
+    <p>
+      <strong>Phone number:</strong>
+      <%= @client.phone_number %>
+    </p>
+
+    <p>
+      <strong>Mobile number:</strong>
+      <%= @client.mobile_number %>
+    </p>
+
+    <p>
+      <strong>Branch location:</strong>
+      <%= @client.branch_location %>
+    </p>
+
+  </div>
+  <div class="col">
+    <p class="lead">Cleint Company Info</p><hr />
+
+    <p>
+      <strong>Company Name:</strong>
+      <%= @client.client_company.company_name %>
+    </p>
+
+    <p>
+      <strong>Street:</strong>
+      <%= @client.client_company.street_address %>
+    </p>
+
+    <p>
+      <strong>State:</strong>
+      <%= @client.client_company.state %>
+    </p>
+
+    <p>
+      <strong>Post Code:</strong>
+      <%= @client.client_company.postal_code %>
+    </p>
+
+    <p>
+      <strong>City:</strong>
+      <%= @client.client_company.city %>
+    </p>
+
+    <p>
+      <strong>Ccountry:</strong>
+      <%= @client.client_company.country %>
+    </p>
+
+    <%= link_to 'Edit Company Info', edit_client_company_path(@client), class: "btn btn-sm btn-outline-secondary", style: "width: 180px;" %>
+
+  </div>
+</div>

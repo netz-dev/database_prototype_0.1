@@ -2,17 +2,30 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.association :client_company %>
-    <%= f.input :title %>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :email %>
-    <%= f.input :phone_number %>
-    <%= f.input :mobile_number %>
-    <%= f.input :branch_location %>
+    <div class="row">
+      <div class="col-6">
+        <div style="padding-bottom: 30px;">
+          <p class="lead">
+            Create a new company before linking client.
+          </p>
+            <%= link_to 'New Company', new_client_company_path, class: "btn btn-outline-info", style: "width: 180px;" %>
+        </div>
+
+        <%= f.association :client_company, label: 'Link Client to a Company', :label_method => lambda { |client_company| "#{client_company.company_name}" } %>
+        <%= f.input :title %>
+        <%= f.input :branch_location %>
+      </div>
+      <div class="col-6">
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :email %>
+        <%= f.input :phone_number %>
+        <%= f.input :mobile_number %>
+      </div>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions text-center">
+    <%= f.button :submit, "Save", class: "btn-outline-success", style: "width: 280px; margin: 30px;" %>
   </div>
 <% end %>

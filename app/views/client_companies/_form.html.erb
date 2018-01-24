@@ -7,10 +7,10 @@
     <%= f.input :state %>
     <%= f.input :postal_code %>
     <%= f.input :city %>
-    <%= f.country_select :country %>
+    <%= f.input :country, selected: [ "United Kingdom" ], collection: [ "Australia", "New Zealand", "United Kingdom" , "United States"] %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions text-center">
+    <%= f.button :submit, "Save", class: "btn btn-outline-success", style: "margin: 30px; width: 280px;" %>
   </div>
 <% end %>

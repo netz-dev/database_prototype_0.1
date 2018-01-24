@@ -1,34 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div style="min-width: 100%; background-color: white; margin-left: -15px;">
+      <h3 style="padding: 20px;"><%= @client_company.company_name %></h3>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <%= render partial: "layouts/shared/flash_messages", flash: flash %>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <%= link_to 'Back to CRM', clients_path, class: "btn btn-outline-secondary", style: "width: 180px;" %> <%= link_to 'Edit', edit_client_company_path(@client_company), class: "btn btn-outline-primary", style: "width: 180px; margin-left: 20px;" %> <%= link_to 'Delete', client_company_path(@client_company), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger", style: "width: 180px; margin-left: 20px;" %>
+  </div>
+</div>
 
-<p>
-  <strong>Company name:</strong>
-  <%= @client_company.company_name %>
-</p>
+<div class="container-fluid" style="margin-bottom: 80px;">
+  <div class="row" style="margin-top: 30px;">
+    <div class="col" style="margin-left: -15px;">
+      <div class="card" style="padding: 20px; min-width: 100%;">
 
-<p>
-  <strong>Street address:</strong>
-  <%= @client_company.street_address %>
-</p>
+        <%= render 'show', client: @client_company %>
 
-<p>
-  <strong>State:</strong>
-  <%= @client_company.state %>
-</p>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Postal code:</strong>
-  <%= @client_company.postal_code %>
-</p>
+  <div class="row" style="margin-top: 30px;">
+    <div class="col" style="margin-left: -15px;">
+      <div class="card" style="padding: 20px; min-width: 100%;">
 
-<p>
-  <strong>City:</strong>
-  <%= @client_company.city %>
-</p>
+        <%= render 'list_of_clients_for_company', client: @client_company %>
 
-<p>
-  <strong>Country:</strong>
-  <%= @client_company.country %>
-</p>
-
-<%= link_to 'Edit', edit_client_company_path(@client_company) %> |
-<%= link_to 'Back', client_companies_path %>
+      </div>
+    </div>
+  </div>
+</div>

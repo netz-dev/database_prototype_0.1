@@ -1,44 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div style="min-width: 100%; background-color: white; margin-left: -15px;">
+      <h3 style="padding: 20px;"><%= @client.first_name %> <%= @client.last_name %> - <%= @client.client_company.company_name %></h3>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <%= render partial: "layouts/shared/flash_messages", flash: flash %>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <%= link_to 'Back', clients_path, class: "btn btn-outline-secondary", style: "width: 180px;" %> <%= link_to 'Edit', edit_client_path(@client), class: "btn btn-outline-primary", style: "width: 180px; margin-left: 20px;" %> <%= link_to 'Delete', client_path(@client), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger", style: "width: 180px; margin-left: 20px;" %>
+  </div>
+</div>
 
-<p>
-  <strong>Client company:</strong>
-  <%= @client.client_company %>
-</p>
+<div class="container-fluid" style="margin-bottom: 80px;">
+  <div class="row" style="margin-top: 30px;">
+    <div class="col" style="margin-left: -15px;">
+      <div class="card" style="padding: 20px; min-width: 100%;">
 
-<p>
-  <strong>Title:</strong>
-  <%= @client.title %>
-</p>
+        <%= render 'show', client: @client %>
 
-<p>
-  <strong>First name:</strong>
-  <%= @client.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @client.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @client.email %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @client.phone_number %>
-</p>
-
-<p>
-  <strong>Mobile number:</strong>
-  <%= @client.mobile_number %>
-</p>
-
-<p>
-  <strong>Branch location:</strong>
-  <%= @client.branch_location %>
-</p>
-
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+      </div>
+    </div>
+  </div>
+</div>
