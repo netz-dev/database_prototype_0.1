@@ -51,10 +51,10 @@
               <!-- <td><%= campaign.estimated_campaign_length %></td> -->
               <!-- <td><%= campaign.initial_total_prospects %></td> -->
               <!-- <td><%= campaign.total_prospects_to_date %></td> -->
-              <td><%= campaign.commercial_agreement_signed_date %></td>
-              <td><%= campaign.estimated_start_date %></td>
+              <td><%= campaign.commercial_agreement_signed_date.to_formatted_s(:rfc822) %></td>
+              <td><%= campaign.estimated_start_date.to_formatted_s(:rfc822)  %></td>
               <!-- <td><%= campaign.estimated_end_date %></td> -->
-              <td><%= campaign.start_date %></td>
+              <td><%= campaign.start_date.to_formatted_s(:rfc822)  %></td>
               <!-- <td><%= campaign.end_date %></td> -->
               <td><%= link_to 'Show', campaign %></td>
               <!-- <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
