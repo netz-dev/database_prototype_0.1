@@ -53,12 +53,20 @@
   </div>
 
   <div class="row" style="margin-right: 15px; margin-top: 30px;">
-    <div class="col-sm">
+    <div class="col-sm-8">
       <div class="card" style="padding: 15px;">
         <p class="lead">
           New Clients
         </p>
         <%= line_chart Client.group_by_day(:created_at).count %>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="padding: 15px;">
+        <p class="lead">
+          Campaigns by Plan
+        </p>
+        <%= pie_chart Campaign.group(:campaign_plan).count %>
       </div>
     </div>
   </div>
