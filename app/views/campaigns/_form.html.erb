@@ -2,7 +2,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.association :client %>
+    <%= f.association :client, label: 'Link Campaign to Client', :label_method => lambda { |client| "#{client.first_name}" " " "#{client.last_name}" " | " "#{client.client_company.company_name}" } %>
     <%= f.input :campaign_reference %>
     <%= f.input :campaign_status %>
     <%= f.input :campaign_type %>

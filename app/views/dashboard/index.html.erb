@@ -8,3 +8,47 @@
 <div class="container-fluid">
   <%= render partial: "layouts/shared/flash_messages", flash: flash %>
 </div>
+<div class="container-fluid" style="margin-bottom: 80px;">
+  <div class="row" style="margin-right: 15px;">
+    <div class="col-sm">
+      <div class="card text-center" style="padding: 15px;">
+        <h2><%= @total_clients.count %></h2>
+        <p class="lead">
+          Total Clients
+        </p>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card text-center" style="padding: 15px;">
+        <h2><%= @live_clients.count %></h2>
+        <p class="lead">
+          Live Clients
+        </p>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card text-center" style="padding: 15px;">
+        <h2><%= @live_campaigns.count %></h2>
+        <p class="lead">
+          Live Campaigns
+        </p>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card text-center" style="padding: 15px;">
+        <h2><%= @total_prospects.count %></h2>
+        <p class="lead">
+          Prospects in DB
+        </p>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card text-center" style="padding: 15px;">
+        <h2><%= @prospects_in_sequence.count %></h2>
+        <p class="lead">
+          Prospects in Seq
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
