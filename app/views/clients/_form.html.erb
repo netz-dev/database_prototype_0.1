@@ -13,6 +13,7 @@
 
         <%= f.association :client_company, label: 'Link Client to a Company', :label_method => lambda { |client_company| "#{client_company.company_name}" } %>
         <%= f.input :title %>
+        <%= f.input :contact_level %>
         <%= f.input :branch_location %>
       </div>
       <div class="col-6">

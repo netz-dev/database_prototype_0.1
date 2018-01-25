@@ -21,7 +21,7 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th colspan="1"></th>
+            <th colspan="2"></th>
             <th>Company</th>
             <th>Title</th>
             <th>First name</th>
@@ -36,6 +36,7 @@
           <% @clients.each do |client| %>
             <tr>
               <td><%= link_to 'View', client, class: "btn btn-sm btn-outline-primary" %></td>
+              <td><%= client.contact_level %></td>
               <td><%= client.client_company.company_name %></td>
               <td><%= client.title %></td>
               <td><%= client.first_name %></td>
