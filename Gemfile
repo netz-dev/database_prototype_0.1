@@ -33,6 +33,7 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
 gem 'simple_form'
 gem 'country_select'
+gem 'font-awesome-sass', '~> 4.7.0'
 
 gem "chartkick"
 gem 'groupdate'
